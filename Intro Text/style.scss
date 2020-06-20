@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadez 6s ease-in-out;
+    opacity: 1;
+
+    @keyframes fadez {
+        0%{
+          opacity: 0;
+        }
+        89%{
+            opacity: 0;
+        }
+       90%{
+           opacity: 0.5;
+       }
+        100% {
+           opacity: 1;
+        }
+    }
+    
+    h1 {
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    a {
+        padding: 0.8rem 2rem;
+        background-image: linear-gradient(90deg, #0077ff, #0051ff, #0044ff, #0084ff, #43c423, #46b81a,#3bbe2a);
+        background-size: 300%;
+        background-position: left;
+        margin: 1rem 0 0 0;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        outline: none;
+        color: white;
+        border: none;
+
+        &:hover {
+            background-position: right;
+            box-shadow: 0 0 16px 1.5px rgb(67, 207, 11);
+        }
+
+    }
+
+
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #161616;
+    animation: slide-out-container 3.6s ease-in-out 2.8s;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+
+        .text-wrapper {
+            color: white;
+            position: absolute;
+        
+            .text {
+                font-weight: 600;
+                font-size: 2.7rem;
+            }
+
+            .text-1, .text-3, .text-4 , .text-8, .text-9, .text-11 {
+                color: transparent;
+                -webkit-text-stroke: 1px white;
+            }
+
+            .text-1 {
+                animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+                opacity: 0;
+            }
+
+            .text-2 {
+                animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
+                opacity: 0;
+            }
+
+            .text-3 {
+                animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
+                opacity: 0;
+            }
+
+             .text-4 {
+                animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
+                opacity: 0;
+            }
+
+            .text-5 {
+                animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
+                opacity: 0;
+            }
+
+            .text-6 {
+                animation: blink 0.8s linear 0.4s, blink 0.8s linear 2.5s, slide-out 1s linear 3.2s;
+                opacity: 0;
+            }
+            
+            .text-7 {
+                animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
+                opacity: 0;
+            }
+
+             .text-8 {
+                animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
+                opacity: 0;
+            }
+
+            .text-9 {
+                animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
+                opacity: 0;
+            } 
+          
+            .text-10 {
+                animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
+                opacity: 0;
+            } 
+             
+            .text-11 {
+                animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+                opacity: 0;
+            } 
+
+        }
+
+}
+
+@keyframes blink {
+    0%{
+        opacity: 0;
+    }
+    1%{
+        opacity: 100%;
+    }
+    99%{
+        opacity: 100%;;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes slide-out {
+       0% {
+           opacity: 0;
+       }
+
+       1% {
+           opacity: 100%;
+       }
+
+       19% {
+           opacity: 100%;
+           ;
+       }
+       
+       20% {
+           opacity: 0;
+       }
+
+       39% {
+           opacity: 0%;
+       }
+
+       40% {
+           opacity: 100%;
+           ;
+       }
+
+       59% {
+           opacity: 100%;
+       }
+
+       60% {
+            opacity: 0%;
+        }
+
+       79% {
+            opacity: 0%;
+        }
+
+        80% {
+            opacity: 100%;
+        }
+    
+        100%{
+            opacity: 100%;
+        }
+}
+
+@keyframes slide-out-container {
+    0%{
+        height: 100vh;
+    }
+
+    40%{
+        height: 100vh;
+    }
+
+    100% {
+        height: 0;
+    }
+
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Progress</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+</head>
+<body>
+    
+    <div class="percent">
+            <div class="fill"></div>
+            <div class="counter"><h1></h1></div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo vitae voluptate facilis molestiae fugiat optio porro at sapiente nisi quod. Provident quos sit obcaecati ullam earum animi fuga repellat quia molestiae? Possimus odit officia nostrum provident totam? Eius, quaerat neque.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo vitae voluptate facilis molestiae fugiat optio porro at sapiente nisi quod. Provident quos sit obcaecati ullam earum animi fuga repellat quia molestiae? Possimus odit officia nostrum provident totam? Eius, quaerat neque.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo vitae voluptate facilis molestiae fugiat optio porro at sapiente nisi quod. Provident quos sit obcaecati ullam earum animi fuga repellat quia molestiae? Possimus odit officia nostrum provident totam? Eius, quaerat neque.</p>
+        </div>
+    </div>
+
+    <script>
+
+        const counter = document.querySelector(".percent");
+
+        TweenLite.set(counter, {
+            xPercent: -5,
+            yPercent: -5,
+        });
+
+        window.addEventListener("mousemove", moveCounter);
+
+        function moveCounter(e) {
+            TweenLite.to(counter, 0.5, {
+                x: e.clientX,
+                y: e.clientY,
+            });
+        }
+
+        function progress() {
+            const scrollTop = $(window).scrollTop();
+            const docHeight = $(document).height();
+            const wHeight = $(window).height();
+            const progress = (scrollTop / (docHeight - wHeight)) * 100;
+
+            const $bgColor =  progress > 99 ? "#ff0000" :  "#006eff";
+            const $textColor = progress > 99 ? "#fff" : "#333";
+
+            $("h1")
+                .text(Math.round(progress) + "%")
+                .css({ color: $textColor });
+
+            $('.fill')
+                .height(progress + "%")
+                .css({ backgroundColor: $bgColor });
+        }
+
+        progress();
+        $(document).on("scroll", progress);
+
+    </script>
+
+</body>
+</html>

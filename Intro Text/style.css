@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+.header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: fadez 6s ease-in-out;
+          animation: fadez 6s ease-in-out;
+  opacity: 1;
+}
+
+@-webkit-keyframes fadez {
+  0% {
+    opacity: 0;
+  }
+  89% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadez {
+  0% {
+    opacity: 0;
+  }
+  89% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.header h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.header a {
+  padding: 0.8rem 2rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(#0077ff), color-stop(#0051ff), color-stop(#0044ff), color-stop(#0084ff), color-stop(#43c423), color-stop(#46b81a), to(#3bbe2a));
+  background-image: linear-gradient(90deg, #0077ff, #0051ff, #0044ff, #0084ff, #43c423, #46b81a, #3bbe2a);
+  background-size: 300%;
+  background-position: left;
+  margin: 1rem 0 0 0;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  border: none;
+}
+
+.header a:hover {
+  background-position: right;
+  -webkit-box-shadow: 0 0 16px 1.5px #43cf0b;
+          box-shadow: 0 0 16px 1.5px #43cf0b;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #161616;
+  -webkit-animation: slide-out-container 3.6s ease-in-out 2.8s;
+          animation: slide-out-container 3.6s ease-in-out 2.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  pointer-events: none;
+}
+
+.container .text-wrapper {
+  color: white;
+  position: absolute;
+}
+
+.container .text-wrapper .text {
+  font-weight: 600;
+  font-size: 2.7rem;
+}
+
+.container .text-wrapper .text-1, .container .text-wrapper .text-3, .container .text-wrapper .text-4, .container .text-wrapper .text-8, .container .text-wrapper .text-9, .container .text-wrapper .text-11 {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+.container .text-wrapper .text-1 {
+  -webkit-animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+          animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+  opacity: 0;
+}
+
+.container .text-wrapper .text-2 {
+  -webkit-animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
+          animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
+  opacity: 0;
+}
+
+.container .text-wrapper .text-3 {
+  -webkit-animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
+          animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
+  opacity: 0;
+}
+
+.container .text-wrapper .text-4 {
+  -webkit-animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
+          animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
+  opacity: 0;
+}
+
+.container .text-wrapper .text-5 {
+  -webkit-animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
+          animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
+  opacity: 0;
+}
+
+.container .text-wrapper .text-6 {
+  -webkit-animation: blink 0.8s linear 0.4s, blink 0.8s linear 2.5s, slide-out 1s linear 3.2s;
+          animation: blink 0.8s linear 0.4s, blink 0.8s linear 2.5s, slide-out 1s linear 3.2s;
+  opacity: 0;
+}
+
+.container .text-wrapper .text-7 {
+  -webkit-animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
+          animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
+  opacity: 0;
+}
+
+.container .text-wrapper .text-8 {
+  -webkit-animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
+          animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
+  opacity: 0;
+}
+
+.container .text-wrapper .text-9 {
+  -webkit-animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
+          animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
+  opacity: 0;
+}
+
+.container .text-wrapper .text-10 {
+  -webkit-animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
+          animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
+  opacity: 0;
+}
+
+.container .text-wrapper .text-11 {
+  -webkit-animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+          animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+  opacity: 0;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 100%;
+  }
+  99% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 100%;
+  }
+  99% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slide-out {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 100%;
+  }
+  19% {
+    opacity: 100%;
+  }
+  20% {
+    opacity: 0;
+  }
+  39% {
+    opacity: 0%;
+  }
+  40% {
+    opacity: 100%;
+  }
+  59% {
+    opacity: 100%;
+  }
+  60% {
+    opacity: 0%;
+  }
+  79% {
+    opacity: 0%;
+  }
+  80% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 100%;
+  }
+  19% {
+    opacity: 100%;
+  }
+  20% {
+    opacity: 0;
+  }
+  39% {
+    opacity: 0%;
+  }
+  40% {
+    opacity: 100%;
+  }
+  59% {
+    opacity: 100%;
+  }
+  60% {
+    opacity: 0%;
+  }
+  79% {
+    opacity: 0%;
+  }
+  80% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes slide-out-container {
+  0% {
+    height: 100vh;
+  }
+  40% {
+    height: 100vh;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes slide-out-container {
+  0% {
+    height: 100vh;
+  }
+  40% {
+    height: 100vh;
+  }
+  100% {
+    height: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
